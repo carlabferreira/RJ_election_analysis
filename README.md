@@ -19,4 +19,5 @@ A parte I está disponível em https://docs.google.com/document/d/1sFVS7tWvMS8RE
 ## Fonte de dados
 - Dados eleitorais: Portal de dados abertos do TSE - https://dadosabertos.tse.jus.br/dataset/resultados-2022
 - Alfabetização: CENSO 2022 - https://www.ibge.gov.br/estatisticas/sociais/saude/22827-censo-demografico-2022.html?=&t=downloads
-- Estatísticas de segurança: Dados Abertos GOV - https://dados.gov.br/dados/conjuntos-dados/isp-estatisticas-de-seguranca-publica (série histórica mensal por município desde 2014)
+- Estatísticas de segurança: Dados Abertos GOV - https://dados.gov.br/dados/conjuntos-dados/isp-estatisticas-de-seguranca-publica (Série histórica mensal por município desde 2014)
+- Malha Geométrica: Dados Abertos GOV - https://dados.gov.br/dados/conjuntos-dados/malha-geometrica-dos-municipios-brasileiros (Malha geométrica dos municípios do Rio de Janeiro (RJ) em 2010)
