@@ -11,7 +11,8 @@ create table munic_tse_ibge(
     uf char(3),
     nome_munic varchar(200),
     capital int,
-    cod_ibge int);
+    cod_ibge int
+);
 
 
 -- (!) Necessário importacao dos dados
@@ -117,5 +118,18 @@ CREATE TABLE alfabetizacao_municipios_rj (
     V00760        INTEGER,                    -- Pessoas alfabetizadas, 80 anos ou mais
     PRIMARY KEY (CD_MUN)
 );
+-- (!) Necessário importacao dos dados de DADOS/Alfabetizacao/por_municipio_Rj.csv
 
--- 
+-- Tabela de segurança (em 2021)
+DROP TABLE IF EXISTS seguranca_municipios_ano;
+
+CREATE TABLE seguranca_municipios_ano (
+    fmun_cod VARCHAR(7) NOT NULL, -- Código IBGE municipal (com zeros à esquerda)
+    fmun VARCHAR(100) NOT NULL,   -- Nome do município
+    ano INTEGER NOT NULL,         -- Ano da agregação (ex: 2021)
+    total_roubos INTEGER,
+    total_furtos INTEGER,
+    registro_ocorrencias INTEGER,
+    PRIMARY KEY (fmun_cod, ano)
+);
+-- (!) Necessário importacao dos dados de DADOS/Seguranca/seguranca_municipios_2021.csv
