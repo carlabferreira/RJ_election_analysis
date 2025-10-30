@@ -21,6 +21,11 @@ create table munic_tse_ibge(
 -- (pode ser feito com comandos /copy também mas possível erros a depender do Sistema Operacional utilizado).
 -- após importação:
 
+-- confirmação pode ser feita com
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'munic_tse_ibge';
+
 -- Tabela dos votos
 DROP TABLE IF EXISTS public.eleicoes_2022_rj;
 
@@ -89,3 +94,25 @@ JOIN munic_tse_ibge m
   ON e.cd_municipio = m.cod_tse
 WHERE e.nr_votavel BETWEEN 10000 AND 99999
 GROUP BY m.cod_ibge, e.nr_votavel, e.nm_votavel;
+
+-- Tabela de alfabetização
+CREATE TABLE alfabetizacao_municipios (
+    CD_MUN        INTEGER NOT NULL,           -- Código do IBGE
+    NM_MUN        VARCHAR(255) NOT NULL,     -- Nome do município
+    V00748        INTEGER,                    -- Pessoas alfabetizadas, 15 a 19 anos
+    V00749        INTEGER,                    -- Pessoas alfabetizadas, 20 a 24 anos
+    V00750        INTEGER,                    -- Pessoas alfabetizadas, 25 a 29 anos
+    V00751        INTEGER,                    -- Pessoas alfabetizadas, 30 a 34 anos
+    V00752        INTEGER,                    -- Pessoas alfabetizadas, 35 a 39 anos
+    V00753        INTEGER,                    -- Pessoas alfabetizadas, 40 a 44 anos
+    V00754        INTEGER,                    -- Pessoas alfabetizadas, 45 a 49 anos
+    V00755        INTEGER,                    -- Pessoas alfabetizadas, 50 a 54 anos
+    V00756        INTEGER,                    -- Pessoas alfabetizadas, 55 a 59 anos
+    V00757        INTEGER,                    -- Pessoas alfabetizadas, 60 a 64 anos
+    V00758        INTEGER,                    -- Pessoas alfabetizadas, 65 a 69 anos
+    V00759        INTEGER,                    -- Pessoas alfabetizadas, 70 a 79 anos
+    V00760        INTEGER,                    -- Pessoas alfabetizadas, 80 anos ou mais
+    PRIMARY KEY (CD_MUN)
+);
+
+-- 
