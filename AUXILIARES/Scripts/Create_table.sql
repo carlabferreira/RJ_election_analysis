@@ -96,7 +96,10 @@ WHERE e.nr_votavel BETWEEN 10000 AND 99999
 GROUP BY m.cod_ibge, e.nr_votavel, e.nm_votavel;
 
 -- Tabela de alfabetização
-CREATE TABLE alfabetizacao_municipios (
+
+DROP TABLE IF EXISTS alfabetizacao_municipios_rj;
+
+CREATE TABLE alfabetizacao_municipios_rj (
     CD_MUN        INTEGER NOT NULL,           -- Código do IBGE
     NM_MUN        VARCHAR(255) NOT NULL,     -- Nome do município
     V00748        INTEGER,                    -- Pessoas alfabetizadas, 15 a 19 anos
