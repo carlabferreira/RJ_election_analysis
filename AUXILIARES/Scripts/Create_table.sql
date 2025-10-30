@@ -102,7 +102,7 @@ DROP TABLE IF EXISTS alfabetizacao_municipios_rj;
 
 CREATE TABLE alfabetizacao_municipios_rj (
     CD_MUN        INTEGER NOT NULL,           -- Código do IBGE
-    NM_MUN        VARCHAR(255) NOT NULL,     -- Nome do município
+    NM_MUN        VARCHAR(255) NOT NULL,      -- Nome do município
     V00748        INTEGER,                    -- Pessoas alfabetizadas, 15 a 19 anos
     V00749        INTEGER,                    -- Pessoas alfabetizadas, 20 a 24 anos
     V00750        INTEGER,                    -- Pessoas alfabetizadas, 25 a 29 anos
