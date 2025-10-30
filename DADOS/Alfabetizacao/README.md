@@ -18,3 +18,13 @@ As informações nas seguintes colunas se referem a diferentes filtros de alfabe
 | V00758 | Pessoas alfabetizadas, 65 a 69 anos | 
 | V00759 | Pessoas alfabetizadas, 70 a 79 anos | 
 | V00760 | Pessoas alfabetizadas, 80 anos ou mais |
+| --- | --- |
+
+Além disso, diferentes arquivos estão disponíveis. Uma breve descrição de cada um está apresentada abaixo.
+
+| Arquivo | Descrição | Origem |
+| --- | --- | --- |
+| Agregados_por_municipios_alfabetizacao_BR.csv | Contém todos os dados de alfabetização para todos os municipios brasileiros (5570), dividos em todas as categorias diferentes (agrupados por cor, gênero, idade etc) | CENSO 2022 por setor censitário (CENSO 2022 - https://www.ibge.gov.br/estatisticas/sociais/saude/22827-censo-demografico-2022.html?=&t=downloads)
+| por_municipio_filtrado_categorias_totais.csv | Contém todos os municipios mas apenas as colunas que contém os dados totais, com códigos listados na tabela acima | Agregados_por_municipios_alfabetizacao_BR.csv + modificações em python em First_analysis.ipynb |
+| por_municipio_RJ.csv | Apenas os municipios do estado do Rio de Janeiro e apenas os dados de alfabetização totais | por_municipio_filtrado_categorias_totais.csv + modificações em python em First_analysis.ipynb |
+| --- | --- | --- |
