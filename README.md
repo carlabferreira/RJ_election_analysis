@@ -14,6 +14,8 @@ Análise espacial da votação de deputado estadual no estado do Rio de Janeiro 
 
     5.2. [Visualização no QGIS](#visualização-dos-dados-no-qgis)
 
+    5.3. [Reprodução de testes]()
+
 ## Integrantes do grupo:
 - Ana Luisa Messias Ferreira Mendes
 - Carla Beatriz Ferreira
@@ -25,13 +27,20 @@ O enunciado do trabalho prático está disponível em [AUXILIARES/Enunciado.pdf]
 
 ## Documentação
 A documentação está organizada em duas partes, seguindo o especificado pelo enunciado.
-A parte I está disponível em https://docs.google.com/document/d/1sFVS7tWvMS8REUltiS8Mdkl9BEqp0kmWNaqbILLi1dM/edit?usp=sharing
+A parte final está disponível em [AUXILIARES/Documentacao.pdf](./AUXILIARES/Documentacao.pdf)
 
 ## Fonte de dados
 - Dados eleitorais: Portal de dados abertos do TSE - https://dadosabertos.tse.jus.br/dataset/resultados-2022
 - Alfabetização: CENSO 2022 - https://www.ibge.gov.br/estatisticas/sociais/saude/22827-censo-demografico-2022.html?=&t=downloads
 - Estatísticas de segurança: Dados Abertos GOV - https://dados.gov.br/dados/conjuntos-dados/isp-estatisticas-de-seguranca-publica (Série histórica mensal por município desde 2014)
 - Malha Geométrica: Dados Abertos GOV - https://dados.gov.br/dados/conjuntos-dados/malha-geometrica-dos-municipios-brasileiros (Malha geométrica dos municípios do Rio de Janeiro (RJ) em 2010)
+
+A organização dos dados para utilização nas análises foi feita a partir do tratamento dos arquivos .csv e criação de outros novos filtrados, com processo apresentado em [analysis.ipynb](analysis.ipynb). Todo o processo foi guiado pela modelagem OMTG apresentada abaixo.
+
+<p align="center">
+  <img src=".//AUXILIARES/imgs/OMTG.png" alt="OMTG" width="600">
+</p>
+
 
 ## Intruções de instalação e execução
 ### Aplicativos necessários: 
@@ -99,4 +108,15 @@ Clique OK e a tabela será criada no PostgreSQL com geometria.
 Inicialmente, a exibição no QGIS (configurado para exibir tabelas não geográficas também) será como a apresentada abaixo:
 <p align="center">
   <img src=".//AUXILIARES/imgs/image_4.png" alt="Tela do QGIS após import" width="600">
+</p>
+
+### Reprodução de testes
+Para reproduzir os experimentos apresentados na [documentação](./AUXILIARES/Documentacao.pdf), basta arrastar os arquivos .shp presentes na pasta [./DADOS/Output_QGIS](./DADOS/Output_QGIS/) e modificar a visualização como desejar. Um exemplo da utilização de [Mapa_Socioeconomico_Votos](./DADOS/Output_QGIS/Mapa_Socioeconomico_Votos.shp) está apresentado abaixo, seguido das configurações de "propriedades" utilizado.
+
+<p align="center">
+  <img src=".//AUXILIARES/imgs/image_5.png" alt="Mapa_Socioeconomico_Votos com taxa de alfabetização no QGIS" width="600">
+</p>
+
+<p align="center">
+  <img src=".//AUXILIARES/imgs/image_6.png" alt="Configuração de propriedades do mapa de taxa de alfabetização apresentado" width="600">
 </p>
